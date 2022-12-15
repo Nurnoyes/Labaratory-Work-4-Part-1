@@ -54,6 +54,8 @@ async def weather(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         chat_id = update.effective_chat.id,
         text = "It's " + str(round(temperature,3)) + '° in ' + location
+               # + ". General description: "+ current_weather(location)['weather']['description']
+               #text= "Smth went wrong. Write down the city again. Don't forger the form is '/weather *city*'."
     )
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
